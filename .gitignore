@@ -1,0 +1,16 @@
+.gradle/
+build/
+**/build/
+.idea/
+.kotlin/
+*.iml
+.DS_Store
+derivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+iosApp/build/
+iosWidget/build/
+shared/build/
+.cache/
+.superpowers/
