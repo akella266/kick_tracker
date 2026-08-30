@@ -27,9 +27,29 @@ targets:
         FRAMEWORK_SEARCH_PATHS: $(SRCROOT)/shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)
         LD_RUNPATH_SEARCH_PATHS: $(inherited) @executable_path/Frameworks
         OTHER_LDFLAGS: $(inherited) -framework shared
+    dependencies:
+      - target: KickTrackerWidgetExtension
     preBuildScripts:
       - name: Build Kotlin Framework
         basedOnDependencyAnalysis: false
         script: |
           cd "$SRCROOT"
           ./gradlew :shared:embedAndSignAppleFrameworkForXcode
+
+  KickTrackerWidgetExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: iosWidget
+    info:
+      path: iosWidget/Info.plist
+    entitlements:
+      path: iosWidget/KickTrackerWidget.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.punchestracker.KickTracker.widget
+        INFOPLIST_FILE: iosWidget/Info.plist
+        CODE_SIGN_ENTITLEMENTS: iosWidget/KickTrackerWidget.entitlements
+        SKIP_INSTALL: YES
+        APPLICATION_EXTENSION_API_ONLY: YES
