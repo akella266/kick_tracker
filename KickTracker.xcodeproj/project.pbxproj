@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BB40648DAEA04AEA4689C9F /* KickMomentWidgetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EA1EE9AB134E34405D6F1A /* KickMomentWidgetModels.swift */; };
+		0EB69BD3419EBF904A37E57D /* KickMomentWidgetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FE08DB37F12AC7B4594B72 /* KickMomentWidgetStore.swift */; };
+		4169774F4C6F043E51A4E98E /* KickTrackerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBD46C6C74FE90EC1B49B35 /* KickTrackerWidget.swift */; };
+		B1207CB8E20E9DE678E9B951 /* KickTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EBE82488A243F9F9DCD0217A /* KickTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F1C298090E48FD42686AFC91 /* KickTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BE33390566EF061777D75 /* KickTrackerApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		67E0E8C39A443457FC43EBA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8400BFC48A04C05952360FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5885F1372ECB5F1537FFB01D;
+			remoteInfo = KickTrackerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20551835ACF03C5E9BDC4D64 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B1207CB8E20E9DE678E9B951 /* KickTrackerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6AE95A57846794DE7099EFE2 /* KickTracker.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = KickTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EDEE930133ECBEDD8B19CA6 /* KickTrackerWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KickTrackerWidget.entitlements; sourceTree = "<group>"; };
+		A4D6DE7C370E5598A70CB925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A5FE08DB37F12AC7B4594B72 /* KickMomentWidgetStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickMomentWidgetStore.swift; sourceTree = "<group>"; };
+		C40BE33390566EF061777D75 /* KickTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickTrackerApp.swift; sourceTree = "<group>"; };
+		C9EA1EE9AB134E34405D6F1A /* KickMomentWidgetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickMomentWidgetModels.swift; sourceTree = "<group>"; };
+		CA545CAF02D43AECA48A2CEC /* KickTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KickTracker.entitlements; sourceTree = "<group>"; };
+		EAC7EEE970A4A9C04BE15B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EBE82488A243F9F9DCD0217A /* KickTrackerWidgetExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = KickTrackerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDBD46C6C74FE90EC1B49B35 /* KickTrackerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickTrackerWidget.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		5784F1ADA8AC470C5F6EBDA6 /* iosApp */ = {
+			isa = PBXGroup;
+			children = (
+				A4D6DE7C370E5598A70CB925 /* Info.plist */,
+				CA545CAF02D43AECA48A2CEC /* KickTracker.entitlements */,
+				C40BE33390566EF061777D75 /* KickTrackerApp.swift */,
+			);
+			path = iosApp;
+			sourceTree = "<group>";
+		};
+		7C08AC36D7C98DEC821AA04E /* iosWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EAC7EEE970A4A9C04BE15B46 /* Info.plist */,
+				C9EA1EE9AB134E34405D6F1A /* KickMomentWidgetModels.swift */,
+				A5FE08DB37F12AC7B4594B72 /* KickMomentWidgetStore.swift */,
+				6EDEE930133ECBEDD8B19CA6 /* KickTrackerWidget.entitlements */,
+				FDBD46C6C74FE90EC1B49B35 /* KickTrackerWidget.swift */,
+			);
+			path = iosWidget;
+			sourceTree = "<group>";
+		};
+		8C45BB99E3E00F07234DC3BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AE95A57846794DE7099EFE2 /* KickTracker.app */,
+				EBE82488A243F9F9DCD0217A /* KickTrackerWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7282D1EB632217FDB6C21BD = {
+			isa = PBXGroup;
+			children = (
+				5784F1ADA8AC470C5F6EBDA6 /* iosApp */,
+				7C08AC36D7C98DEC821AA04E /* iosWidget */,
+				8C45BB99E3E00F07234DC3BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5885F1372ECB5F1537FFB01D /* KickTrackerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6162E3BECFEC4FF803A28BC /* Build configuration list for PBXNativeTarget "KickTrackerWidgetExtension" */;
+			buildPhases = (
+				36BD1CC6103BD3CE091332C8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KickTrackerWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = KickTrackerWidgetExtension;
+			productReference = EBE82488A243F9F9DCD0217A /* KickTrackerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5A62E7F6BE17CFE797C0F511 /* KickTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F21932FFF32092FCEFA90AEE /* Build configuration list for PBXNativeTarget "KickTracker" */;
+			buildPhases = (
+				47E1529E68E5699B19998662 /* Build Kotlin Framework */,
+				789E119F51255F4D93A79585 /* Sources */,
+				20551835ACF03C5E9BDC4D64 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8CFE3C865975AD4F5513AFDF /* PBXTargetDependency */,
+			);
+			name = KickTracker;
+			packageProductDependencies = (
+			);
+			productName = KickTracker;
+			productReference = 6AE95A57846794DE7099EFE2 /* KickTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8400BFC48A04C05952360FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5885F1372ECB5F1537FFB01D = {
+						DevelopmentTeam = "";
+					};
+					5A62E7F6BE17CFE797C0F511 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = C7DF23EC18BA31326896119D /* Build configuration list for PBXProject "KickTracker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C7282D1EB632217FDB6C21BD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8C45BB99E3E00F07234DC3BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A62E7F6BE17CFE797C0F511 /* KickTracker */,
+				5885F1372ECB5F1537FFB01D /* KickTrackerWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47E1529E68E5699B19998662 /* Build Kotlin Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Kotlin Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT\"\n./gradlew :shared:embedAndSignAppleFrameworkForXcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36BD1CC6103BD3CE091332C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BB40648DAEA04AEA4689C9F /* KickMomentWidgetModels.swift in Sources */,
+				0EB69BD3419EBF904A37E57D /* KickMomentWidgetStore.swift in Sources */,
+				4169774F4C6F043E51A4E98E /* KickTrackerWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		789E119F51255F4D93A79585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C298090E48FD42686AFC91 /* KickTrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CFE3C865975AD4F5513AFDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5885F1372ECB5F1537FFB01D /* KickTrackerWidgetExtension */;
+			targetProxy = 67E0E8C39A443457FC43EBA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		001D6DB3E25E10A1A9C4AC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		13C0F667148B382BEEB5769A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iosApp/KickTracker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited) -framework shared";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punchestracker.KickTracker;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1423E2A8C8C48649DDC860BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		4AA5A318A9D51CCD970C4E67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = iosWidget/KickTrackerWidget.entitlements;
+				INFOPLIST_FILE = iosWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.punchestracker.KickTracker.widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7CDA36A9F1B36BB8FDC4E092 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iosApp/KickTracker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)";
+				INFOPLIST_FILE = iosApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited) -framework shared";
+				PRODUCT_BUNDLE_IDENTIFIER = com.punchestracker.KickTracker;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C1A2A10530925999A6521840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = iosWidget/KickTrackerWidget.entitlements;
+				INFOPLIST_FILE = iosWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.punchestracker.KickTracker.widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7DF23EC18BA31326896119D /* Build configuration list for PBXProject "KickTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1423E2A8C8C48649DDC860BD /* Debug */,
+				001D6DB3E25E10A1A9C4AC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D6162E3BECFEC4FF803A28BC /* Build configuration list for PBXNativeTarget "KickTrackerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1A2A10530925999A6521840 /* Debug */,
+				4AA5A318A9D51CCD970C4E67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F21932FFF32092FCEFA90AEE /* Build configuration list for PBXNativeTarget "KickTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13C0F667148B382BEEB5769A /* Debug */,
+				7CDA36A9F1B36BB8FDC4E092 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8400BFC48A04C05952360FC /* Project object */;
+}
