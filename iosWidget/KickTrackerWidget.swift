@@ -50,22 +50,42 @@ struct KickTrackerWidgetView: View {
     }
 
     private var homeScreenBody: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Шевеление")
-                .font(.headline)
+        VStack(alignment: .leading, spacing: 10) {
+            Label("Шевеление", systemImage: "figure.child")
+                .font(.subheadline.weight(.semibold))
+                .lineLimit(1)
+
             Button(intent: RecordKickIntent()) {
-                Text("Записать")
+                Label("Записать", systemImage: "plus.circle.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
                     .frame(maxWidth: .infinity)
             }
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.roundedRectangle(radius: 12))
+
+            Spacer(minLength: 0)
+
             if let lastMoment = entry.lastMoment {
-                Text("Последняя: \(format(timestampMillis: lastMoment.timestampMillis))")
-                    .font(.caption)
+                VStack(alignment: .leading, spacing: 1) {
+                    Text("Последняя запись")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                    Text(formatDate(timestampMillis: lastMoment.timestampMillis))
+                        .font(.caption.weight(.medium))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.75)
+                    Text(formatTime(timestampMillis: lastMoment.timestampMillis))
+                        .font(.caption.monospacedDigit().weight(.semibold))
+                        .lineLimit(1)
+                }
             } else {
                 Text("Пока нет записей")
-                    .font(.caption)
+                    .font(.caption.weight(.medium))
+                    .lineLimit(2)
             }
         }
-        .padding()
         .containerBackground(.background, for: .widget)
     }
 
@@ -80,11 +100,19 @@ struct KickTrackerWidgetView: View {
         .containerBackground(.background, for: .widget)
     }
 
-    private func format(timestampMillis: Int64) -> String {
+    private func formatDate(timestampMillis: Int64) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestampMillis) / 1000)
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ru_RU")
-        formatter.dateFormat = "d MMMM, HH:mm"
+        formatter.dateFormat = "d MMMM"
+        return formatter.string(from: date)
+    }
+
+    private func formatTime(timestampMillis: Int64) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(timestampMillis) / 1000)
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ru_RU")
+        formatter.dateFormat = "HH:mm:ss"
         return formatter.string(from: date)
     }
 }

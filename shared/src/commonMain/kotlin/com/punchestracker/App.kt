@@ -8,11 +8,14 @@ import com.punchestracker.domain.usecase.ObserveKickMomentsUseCase
 import com.punchestracker.domain.usecase.RefreshKickMomentsUseCase
 import com.punchestracker.presentation.DateTimeFormatter
 import com.punchestracker.ui.KickTrackerRoot
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 
 @Composable
 fun App(
     repository: KickMomentRepository,
     dateTimeFormatter: DateTimeFormatter,
+    refreshEvents: Flow<Unit> = flowOf(Unit),
 ) {
     KickTrackerRoot(
         observeKickMoments = ObserveKickMomentsUseCase(repository),
@@ -20,5 +23,6 @@ fun App(
         deleteKickMoment = DeleteKickMomentUseCase(repository),
         refreshKickMoments = RefreshKickMomentsUseCase(repository),
         dateTimeFormatter = dateTimeFormatter,
+        refreshEvents = refreshEvents,
     )
 }

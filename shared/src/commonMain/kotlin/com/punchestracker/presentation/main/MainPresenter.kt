@@ -3,7 +3,6 @@ package com.punchestracker.presentation.main
 import com.punchestracker.domain.KickMoment
 import com.punchestracker.domain.usecase.AddKickMomentUseCase
 import com.punchestracker.domain.usecase.ObserveKickMomentsUseCase
-import com.punchestracker.domain.usecase.RefreshKickMomentsUseCase
 import com.punchestracker.presentation.DateTimeFormatter
 import com.punchestracker.presentation.KickMomentUi
 import kotlinx.coroutines.CoroutineDispatcher
@@ -18,7 +17,6 @@ import kotlinx.coroutines.launch
 class MainPresenter(
     private val observeKickMoments: ObserveKickMomentsUseCase,
     private val addKickMoment: AddKickMomentUseCase,
-    private val refreshKickMoments: RefreshKickMomentsUseCase,
     private val dateTimeFormatter: DateTimeFormatter,
     private val scope: CoroutineScope,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Default,
@@ -36,11 +34,6 @@ class MainPresenter(
                         recentMoments = moments.take(5).map(::toUi),
                     )
                 }
-            }
-        }
-        jobs += scope.launch(dispatcher) {
-            refreshKickMoments().onFailure {
-                mutableState.update { state -> state.copy(isLoading = false, errorMessage = "Не удалось загрузить историю") }
             }
         }
     }

@@ -17,8 +17,19 @@ targets:
       - path: iosApp
     info:
       path: iosApp/Info.plist
+      properties:
+        CADisableMinimumFrameDurationOnPhone: true
+        CFBundleDevelopmentRegion: ru
+        CFBundleDisplayName: Шевеления
+        LSRequiresIPhoneOS: true
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
     entitlements:
       path: iosApp/KickTracker.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.punchestracker.KickTracker
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.punchestracker.KickTracker
@@ -44,8 +55,16 @@ targets:
       - path: iosWidget
     info:
       path: iosWidget/Info.plist
+      properties:
+        CFBundleDevelopmentRegion: ru
+        CFBundleDisplayName: Шевеления
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
     entitlements:
       path: iosWidget/KickTrackerWidget.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.punchestracker.KickTracker
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.punchestracker.KickTracker.widget

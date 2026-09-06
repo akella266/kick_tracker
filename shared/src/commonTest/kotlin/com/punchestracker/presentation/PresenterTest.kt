@@ -5,7 +5,6 @@ import com.punchestracker.domain.KickMomentRepository
 import com.punchestracker.domain.usecase.AddKickMomentUseCase
 import com.punchestracker.domain.usecase.DeleteKickMomentUseCase
 import com.punchestracker.domain.usecase.ObserveKickMomentsUseCase
-import com.punchestracker.domain.usecase.RefreshKickMomentsUseCase
 import com.punchestracker.presentation.history.HistoryPresenter
 import com.punchestracker.presentation.main.MainPresenter
 import kotlinx.coroutines.CoroutineScope
@@ -87,7 +86,6 @@ class PresenterTest {
         return MainPresenter(
             observeKickMoments = ObserveKickMomentsUseCase(repository),
             addKickMoment = AddKickMomentUseCase(repository),
-            refreshKickMoments = RefreshKickMomentsUseCase(repository),
             dateTimeFormatter = FakeFormatter(),
             scope = scope,
             dispatcher = dispatcher,
@@ -102,7 +100,6 @@ class PresenterTest {
         return HistoryPresenter(
             observeKickMoments = ObserveKickMomentsUseCase(repository),
             deleteKickMoment = DeleteKickMomentUseCase(repository),
-            refreshKickMoments = RefreshKickMomentsUseCase(repository),
             dateTimeFormatter = FakeFormatter(),
             scope = scope,
             dispatcher = dispatcher,

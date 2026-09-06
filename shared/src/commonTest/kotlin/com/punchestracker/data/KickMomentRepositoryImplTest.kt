@@ -1,5 +1,9 @@
 package com.punchestracker.data
 
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.yield
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -10,6 +14,20 @@ class KickMomentRepositoryImplTest {
         var content: String? = initial
         override suspend fun readText(): String? = content
         override suspend fun writeTextAtomically(text: String) {
+            content = text
+        }
+    }
+
+    private class YieldingMemoryFileDataSource : KickMomentFileDataSource {
+        var content: String? = null
+
+        override suspend fun readText(): String? {
+            yield()
+            return content
+        }
+
+        override suspend fun writeTextAtomically(text: String) {
+            yield()
             content = text
         }
     }
@@ -68,5 +86,19 @@ class KickMomentRepositoryImplTest {
 
         assertTrue(result.isFailure)
         assertEquals(emptyList(), repository.observeMoments().value)
+    }
+
+    @Test
+    fun concurrentAddsDoNotLoseMoments() = runTest {
+        val repository = KickMomentRepositoryImpl(YieldingMemoryFileDataSource())
+
+        coroutineScope {
+            (1L..20L)
+                .map { timestamp -> async { repository.addMoment(timestamp).getOrThrow() } }
+                .awaitAll()
+        }
+
+        assertEquals(20, repository.observeMoments().value.size)
+        assertEquals((20L downTo 1L).toList(), repository.observeMoments().value.map { it.timestampMillis })
     }
 }

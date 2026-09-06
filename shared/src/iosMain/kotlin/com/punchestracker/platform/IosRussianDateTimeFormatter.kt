@@ -9,7 +9,7 @@ import platform.Foundation.dateWithTimeIntervalSince1970
 class IosRussianDateTimeFormatter : DateTimeFormatter {
     private val formatter = NSDateFormatter().apply {
         locale = NSLocale(localeIdentifier = "ru_RU")
-        dateFormat = "d MMMM, HH:mm"
+        dateFormat = "d MMMM, HH:mm:ss"
     }
 
     override fun format(timestampMillis: Long): String {
